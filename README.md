@@ -4,7 +4,7 @@ I originally intended to improve the accuracy of a [picture classification from 
 In this project, I used Pytorch and Deep CNN to do the classification work. Since this dataset didn’t contain test data, I used 90% of the train data to train the CNN model and 10% to test the CNN model. 
 So the procedure of my code is, first extra data from the original dataset and make them to Pytorch Dataset, then use Pytorch DateLoader to load into batch size = 128. Then train the train data for 10 times while valid the test data after each train to see how the accuracy improved and if overfitting. I copied the train part from the CSE473 AI project and the rest of the bird classification project is my own work.
 
-For this project, I first made a DeepCNN model by myself, and trained on this model:
+For this project, I first made a DeepCNN model with three Conv filters by myself, and trained on this model:
 
     class DeepCNN(nn.Module):
         def __init__(self, arr=[]):
@@ -28,8 +28,11 @@ For this project, I first made a DeepCNN model by myself, and trained on this mo
             #x = F.relu(self.fc1(x))
             x = self.fc2(x)
             return x
-
-
+However, my CNN model was highly overfitted and the accuracy for both training and testing were low.
+|                 | Header | Right  |
+|  -------------- | ------ | -----: |
+|  train Accuracy |  Cell  |   $10  |
+|  valid Accuracy |  Cell  |   $20  |
 
 
 # Header 1 #
