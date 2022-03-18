@@ -5,6 +5,7 @@ In this project, I used Pytorch and Deep CNN to do the classification work. Sinc
 So the procedure of my code is, first extra data from the original dataset and make them to Pytorch Dataset, then use Pytorch DateLoader to load into batch size = 128. Then train the train data for 10 times while valid the test data after each train to see how the accuracy improved and if overfitting. I copied the train part from the CSE473 AI project and the rest of the bird classification project is my own work.
 
 For this project, I first made a DeepCNN model by myself, and trained on this model:
+
     class DeepCNN(nn.Module):
         def __init__(self, arr=[]):
             super(DeepCNN, self).__init__()
