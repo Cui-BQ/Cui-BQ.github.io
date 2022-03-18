@@ -47,93 +47,12 @@ The finaly result was good after epoch 10 times:
 
 This new model is still overfitted, but the valid accuracy is much higher than my DeepCNN model. Then I used this model to predict the test data and submitted the prediction to the competition. I got a score of 0.64400, which is very close to my valid accuracy at epoch9 and 10.
 
-# Header 1 #
-## Header 2 ##
-### Header 3 ###             (Hashes on right are optional)
-#### Header 4 ####
-##### Header 5 #####
+The above two models were trained with resized 224x224 images, so I decided to quadruple the image size to 448x448 and use resnet18 to train again to see if what’s the improvement. And the outcome are:
+|resnet18(488x488)| epoch1 | epoch2 | epoch3 | epoch4 | epoch5 | epoch6 | epoch7 | epoch8 | epoch9 | epoch10 |
+|  -------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------: |
+|  train Accuracy | 0.1224 | 0.4446 | 0.6161 | 0.7098 | 0.7690 | 0.8060 | 0.8363 | 0.8589 | 0.8776 | 0.8925  |
+|  valid Accuracy | 0.3064 | 0.4959 | 0.5952 | 0.6401 | 0.6663 | 0.6852 | 0.7088 | 0.7080 | 0.7212 | 0.7243  |
 
-## Markdown plus h2 with a custom ID ##         {#id-goes-here}
-[Link back to H2](#id-goes-here)
-
-This is a paragraph, which is text surrounded by whitespace. Paragraphs can be on one 
-line (or many), and can drone on for hours.  
-
-Here is a Markdown link to [Warped](http://warpedvisions.org), and a literal . 
-Now some SimpleLinks, like one to [google] (automagically links to are-you-
-feeling-lucky), a [wiki: test] link to a Wikipedia page, and a link to 
-[foldoc: CPU]s at foldoc.  
-
-Now some inline markup like _italics_,  **bold**, and `code()`. Note that underscores in 
-words are ignored in Markdown Extra.
-
-![picture alt](/images/photo.jpeg "Title is optional")     
-
-> Blockquotes are like quoted text in email replies
->> And, they can be nested
-
-* Bullet lists are easy too
-- Another one
-+ Another one
-
-1. A numbered list
-2. Which is numbered
-3. With periods and a space
-
-And now some code:
-
-    // Code is just text indented a bit
-    which(is_easy) to_remember();
-
-~~~
-
-// Markdown extra adds un-indented code blocks too
-
-if (this_is_more_code == true && !indented) {
-    // tild wrapped code blocks, also not indented
-}
-
-~~~
-
-Text with  
-two trailing spaces  
-(on the right)  
-can be used  
-for things like poems  
-
-### Horizontal rules
-
-* * * *
-****
---------------------------
+The accuracy got higher with larger image size. But when I tried to predict the true 10000 test image, my code ran out of CUAD memory and failed. 
 
 
-<div class="custom-class" markdown="1">
-This is a div wrapping some Markdown plus.  Without the DIV attribute, it ignores the 
-block. 
-</div>
-
-## Markdown plus tables ##
-
-| Header | Header | Right  |
-| ------ | ------ | -----: |
-|  Cell  |  Cell  |   $10  |
-|  Cell  |  Cell  |   $20  |
-
-* Outer pipes on tables are optional
-* Colon used for alignment (right versus left)
-
-## Markdown plus definition lists ##
-
-Bottled water
-: $ 1.25
-: $ 1.55 (Large)
-
-Milk
-Pop
-: $ 1.75
-
-* Multiple definitions and terms are possible
-* Definitions can include multiple paragraphs too
-
-*[ABBR]: Markdown plus abbreviations (produces an <abbr> tag)
