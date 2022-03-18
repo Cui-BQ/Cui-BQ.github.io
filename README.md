@@ -29,10 +29,10 @@ For this project, I first made a DeepCNN model with three Conv filters by myself
             x = self.fc2(x)
             return x
 However, my CNN model was highly overfitted and the accuracy for both training and testing were low.
-|                 | Header | Right  |
-|  -------------- | ------ | -----: |
-|  train Accuracy |  Cell  |   $10  |
-|  valid Accuracy |  Cell  |   $20  |
+|      DeepCNN    | epoch1 | Right  | epoch1 | Right  | epoch1 | Right  | epoch1 | Right  | epoch1 | Right  |
+|  -------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | -----: |
+|  train Accuracy |  Cell  |   $10  |  Cell  |   $10  |  Cell  |   $10  |  Cell  |   $10  |  Cell  |   $10  |
+|  valid Accuracy |  Cell  |   $20  |  Cell  |   $10  |  Cell  |   $10  |  Cell  |   $10  |  Cell  |   $10  |
 
 
 # Header 1 #
