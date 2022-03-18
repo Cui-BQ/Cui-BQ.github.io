@@ -55,4 +55,4 @@ The above two models were trained with resized 224x224 images, so I decided to q
 
 The accuracy got higher with larger image size. But when I tried to predict the true 10000 test image, my code ran out of CUAD memory and failed. 
 
-Here is my [Kaggle notebook](https://www.kaggle.com/cuiboqiang/notebook8868ae484c) for this project.
+Here is my [Kaggle notebook](https://www.kaggle.com/code/cuiboqiang/notebook8868ae484c) for this project.
