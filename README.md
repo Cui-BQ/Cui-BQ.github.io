@@ -28,6 +28,8 @@ For this project, I first made a DeepCNN model with three Conv filters by myself
             #x = F.relu(self.fc1(x))
             x = self.fc2(x)
             return x
+            
+            
 However, my CNN model was highly overfitted and the accuracy for both training and testing were low.
 |      DeepCNN    | epoch1 | epoch2 | epoch3 | epoch4 | epoch5 | epoch6 | epoch7 | epoch8 | epoch9 | epoch10 |
 |  -------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------  |
