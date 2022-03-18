@@ -1,5 +1,5 @@
 ## CSE 455 Final project report ##
-    I originally intended to improve the accuracy of a [picture classification from my CSE473 AI class project](https://courses.cs.washington.edu/courses/cse473/22wi/assignments/hw5/index.html). But I laterly thought I should try something new. Thus, I took some code from this picture classification project to do the Kaggle Bird classification project. 
+    I originally intended to improve the accuracy of a [picture classification from my CSE473 AI class project](https://courses.cs.washington.edu/courses/cse473/22wi/assignments/hw5/index.html). But I laterly thought I should try something new. Thus, I took some code from this picture classification project to do the Kaggle Bird classification project. My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
   
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 
