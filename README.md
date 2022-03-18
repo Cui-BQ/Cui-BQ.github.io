@@ -1,6 +1,7 @@
 ## CSE 455 Final project report ##
 I originally intended to improve the accuracy of a [picture classification from my CSE473 AI class project](https://courses.cs.washington.edu/courses/cse473/22wi/assignments/hw5/index.html). But I laterly thought I should try something new. Thus, I took some code from this picture classification project to do the Kaggle Bird classification project. 
-  
+
+In this project, I used Pytorch and Deep CNN to do the classification work. Since this dataset didn’t contain test data, I used 90% of the train data to train the CNN model and 10% to test the CNN model. 
 
 
 
