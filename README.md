@@ -58,3 +58,21 @@ The above two models were trained with resized 224x224 images, so I decided to q
 The accuracy got higher with larger image size. But when I tried to predict the true 10000 test image, my code ran out of CUAD memory and failed. 
 
 Here is my [Kaggle notebook](https://www.kaggle.com/code/cuiboqiang/notebook8868ae484c) for this project.
+
+
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the 
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
