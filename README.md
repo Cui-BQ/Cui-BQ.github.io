@@ -31,6 +31,7 @@ For this project, I first made a DeepCNN model with three Conv filters by myself
             
             
 However, my CNN model was highly overfitted and the accuracy for both training and testing were low.
+
 |      DeepCNN    | epoch1 | epoch2 | epoch3 | epoch4 | epoch5 | epoch6 | epoch7 | epoch8 | epoch9 | epoch10 |
 |  -------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------  |
 |  train Accuracy | 0.0059 | 0.0212 | 0.0485 | 0.0852 | 0.1218 | 0.1614 | 0.1959 | 0.2349 | 0.2673 | 0.3017  |
@@ -42,6 +43,7 @@ Next I decided to use the pretrained “resnet18” model, it’s an image class
     model = models.resnet18(pretrained=True)
     
 The finaly result was good after epoch 10 times:
+
 |      resnet18   | epoch1 | epoch2 | epoch3 | epoch4 | epoch5 | epoch6 | epoch7 | epoch8 | epoch9 | epoch10 |
 |  -------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------: |
 |  train Accuracy | 0.1192 | 0.4138 | 0.5699 | 0.6588 | 0.7294 | 0.7822 | 0.8165 | 0.8467 | 0.8714 | 0.8871  |
@@ -50,6 +52,7 @@ The finaly result was good after epoch 10 times:
 This new model is still overfitted, but the valid accuracy is much higher than my DeepCNN model. Then I used this model to predict the test data and submitted the prediction to the competition. I got a score of 0.64400, which is very close to my valid accuracy at epoch9 and 10.
 
 The above two models were trained with resized 224x224 images, so I decided to quadruple the image size to 448x448 and use resnet18 to train again to see if what’s the improvement. And the outcome are:
+
 |resnet18(488x488)| epoch1 | epoch2 | epoch3 | epoch4 | epoch5 | epoch6 | epoch7 | epoch8 | epoch9 | epoch10 |
 |  -------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------: |
 |  train Accuracy | 0.1224 | 0.4446 | 0.6161 | 0.7098 | 0.7690 | 0.8060 | 0.8363 | 0.8589 | 0.8776 | 0.8925  |
@@ -58,21 +61,3 @@ The above two models were trained with resized 224x224 images, so I decided to q
 The accuracy got higher with larger image size. But when I tried to predict the true 10000 test image, my code ran out of CUAD memory and failed. 
 
 Here is my [Kaggle notebook](https://www.kaggle.com/code/cuiboqiang/notebook8868ae484c) for this project.
-
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
