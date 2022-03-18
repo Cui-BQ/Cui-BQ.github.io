@@ -1,3 +1,14 @@
+## CSE 455 Final project report ##
+I originally intended to improve the accuracy of a picture classification from my CSE473 AI class project. But I laterly thought I should try something new. Thus, I took some code from this picture classification project to do the Kaggle Bird classification project. 
+
+
+
+
+
+
+
+
+
 # Header 1 #
 ## Header 2 ##
 ### Header 3 ###             (Hashes on right are optional)
